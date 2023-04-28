@@ -24,7 +24,7 @@ public class Simple {
         System.out.print("Hello ");
 
         // output is based on input arguments
-        if (args.length == 1) {
+        if (args.length > 0) {
             System.out.println(args[0]);
         }
     }
