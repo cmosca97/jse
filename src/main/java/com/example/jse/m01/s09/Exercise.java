@@ -17,8 +17,21 @@ public class Exercise {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO
-
+        //(1)
+        String[] numbers = {"one", "two", "three", "four"};
+        //String[] numbers = new String[4];
+        //numbers[0] = "one";
+        //numbers[1] = "two";
+        //numbers[2] = "three";
+        //numbers[3] = "four";
+        
+        //(2)
+        System.out.println(numbers.length);
+        
+        
+        //(3)
+        System.out.println(numbers[numbers.length - 1]);
+        
         System.out.println("Done");
     }
 }
