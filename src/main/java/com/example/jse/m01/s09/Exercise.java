@@ -26,10 +26,10 @@ public class Exercise {
         // numbers[3] = "four";
 
         // (2)
-        System.out.println(numbers.length);
+        System.out.println("This array has " + numbers.length + " elements");
 
         // (3)
-        System.out.println(numbers[numbers.length - 1]);
+        System.out.println("The last element of this array is " + numbers[numbers.length - 1]);
 
         System.out.println("Done");
     }
