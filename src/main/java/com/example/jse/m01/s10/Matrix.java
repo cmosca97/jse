@@ -34,10 +34,10 @@ public class Matrix {
         System.out.print("Matrix to string: ");
         System.out.println(matrix.toString());
         // disappointing
-        System.out.print("Arrays::toString() is not enough for multidimensional arrays: ");
+        System.out.print("Arrays.toString() is not enough for multidimensional arrays: ");
         System.out.println(Arrays.toString(matrix));
         // this is what we need here
-        System.out.print("Arrays::deepToString() is what we need here: ");
+        System.out.print("Arrays.deepToString() is what we need here: ");
         System.out.println(Arrays.deepToString(matrix));
     }
 }

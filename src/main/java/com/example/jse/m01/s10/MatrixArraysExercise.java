@@ -5,6 +5,8 @@
  */
 package com.example.jse.m01.s10;
 
+import java.util.Arrays;
+
 /**
  * Exercise on two-dimensional array
  */
@@ -23,7 +25,21 @@ public class MatrixArraysExercise {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO
+        String[][] greetings = { //
+                { "ciao", "buongiorno" }, //
+                { "hello", "good morning" } //
+        };
+
+//        String value = greetings[1][0];
+//        System.out.println(value);
+        System.out.println(greetings[1][0]);
+
+//        String [] italianGreetings = greetings[0];
+//        var s = Arrays.toString(italianGreetings);
+//        System.out.println(s);
+        System.out.println(Arrays.toString(greetings[0]));
+
+        System.out.println(Arrays.deepToString(greetings));
 
         System.out.println("Done");
     }
