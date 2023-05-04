@@ -15,7 +15,7 @@ public class Exercise5 {
      * @param args not used
      */
     public static void main(String[] args) {
-        int a = 20;
+        int a = 31;
         int b = 10;
 
         int multi = a * b;
@@ -33,21 +33,29 @@ public class Exercise5 {
         System.out.println("a / b = " + div);
         // TODO (2) Get the same result without dividing
         int divi = a;
-        int j = 0;
-        while (j < b) {
-            divi -= b;
-            j++;
+        i = 0;
+        if (a < b) {
+            System.out.println("a / b = 0");
+        } else {
+            while (i < divi) {
+                divi -= b;
+                i++;
+            }
+            if(i > divi) {
+                System.out.println("a / b = " + (i - 1));
+            } else {
+                System.out.println("a / b = " + i);
+            }
         }
-        System.out.println("a / b = " + j);
 
         int mod = a % b;
         System.out.println("a % b = " + mod);
         // TODO (3) Get the same result without using the modulo operator
         int modu = a;
-        int k = 0;
-        while (k < b) {
+        i = 0;
+        while (i < Math.min(modu, b)) {
             modu -= b;
-            k++;
+            i++;
         }
         System.out.println("a % b = " + modu);
     }
