@@ -15,9 +15,10 @@ public class Exercise5 {
      * @param args not used
      */
     public static void main(String[] args) {
-        int a = 31;
-        int b = 10;
+        int a = 29;
+        int b = 34;
 
+        // 1
         int multi = a * b;
         System.out.println("a * b = " + multi);
         // TODO (1) Get the same result without multiplying
@@ -29,34 +30,38 @@ public class Exercise5 {
         }
         System.out.println("a * b = " + mol);
 
+        // 2
         int div = a / b;
         System.out.println("a / b = " + div);
         // TODO (2) Get the same result without dividing
-        int divi = a;
-        i = 0;
-        if (a < b) {
-            System.out.println("a / b = 0");
-        } else {
-            while (i < divi) {
-                divi -= b;
-                i++;
-            }
-            if(i > divi) {
-                System.out.println("a / b = " + (i - 1));
-            } else {
-                System.out.println("a / b = " + i);
-            }
-        }
+//        int divi = a;
+//        i = 0;
+//        if (a < b) {
+//            System.out.println("a / b = 0");
+//        } else {
+//            while (i < divi) {
+//                divi -= b;
+//                i++;
+//            }
+//            if(i > divi) {
+//                System.out.println("a / b = " + (i - 1));
+//            } else {
+//                System.out.println("a / b = " + i);
+//            }
+//        }
 
+        // 3
         int mod = a % b;
         System.out.println("a % b = " + mod);
         // TODO (3) Get the same result without using the modulo operator
-        int modu = a;
-        i = 0;
-        while (i < Math.min(modu, b)) {
-            modu -= b;
-            i++;
-        }
-        System.out.println("a % b = " + modu);
+//        if (b = 0) {
+//            System.out.println("Cannot return the modulo of a / b, because b = 0");
+//        }
+//        
+//        while (i < Math.min(modu, b)) {
+//            modu -= b;
+//            i++;
+//        }
+//        System.out.println("a % b = " + modu);
     }
 }
