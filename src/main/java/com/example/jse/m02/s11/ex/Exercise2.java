@@ -22,6 +22,25 @@ public class Exercise2 {
         boolean[] flags = { true, false, false };
         System.out.println(Arrays.toString(flags));
 
-        // TODO
+        int i = 0;
+        while(i < flags.length) {
+            
+//            if (flags[i] == true) {
+//                flags[i] = false;
+//            } else {
+//                flags[i] = true;
+//            }
+            
+            flags [i] = !flags[i];        
+            i++;
+        }
+        System.out.println(Arrays.toString(flags));
+        
+        i = 0;
+        do {
+            flags [i] = !flags[i];
+            i++;
+        } while (i < flags.length);
+        System.out.println(Arrays.toString(flags));
     }
 }
