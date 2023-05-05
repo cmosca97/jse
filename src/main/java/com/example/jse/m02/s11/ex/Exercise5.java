@@ -15,8 +15,8 @@ public class Exercise5 {
      * @param args not used
      */
     public static void main(String[] args) {
-        int a = 29;
-        int b = 34;
+        int a = 89;
+        int b = 9;
 
         // 1
         int multi = a * b;
@@ -34,34 +34,37 @@ public class Exercise5 {
         int div = a / b;
         System.out.println("a / b = " + div);
         // TODO (2) Get the same result without dividing
-//        int divi = a;
-//        i = 0;
-//        if (a < b) {
-//            System.out.println("a / b = 0");
-//        } else {
-//            while (i < divi) {
-//                divi -= b;
-//                i++;
-//            }
-//            if(i > divi) {
-//                System.out.println("a / b = " + (i - 1));
-//            } else {
-//                System.out.println("a / b = " + i);
-//            }
-//        }
+        int temp = a;
+        i = 0;
+
+        if (b == 0) {
+            System.out.println("Chose b not equal to 0!");
+        } else if (a == 0 | a < b) {
+            System.out.println("a / b = 0");
+        } else {
+            while (temp >= b) {
+                temp -= b;
+                i++;
+            }
+            System.out.println("a / b = " + i);
+        }
 
         // 3
         int mod = a % b;
         System.out.println("a % b = " + mod);
         // TODO (3) Get the same result without using the modulo operator
-//        if (b = 0) {
-//            System.out.println("Cannot return the modulo of a / b, because b = 0");
-//        }
-//        
-//        while (i < Math.min(modu, b)) {
-//            modu -= b;
-//            i++;
-//        }
-//        System.out.println("a % b = " + modu);
+        i = 0;
+        int tempMod = a;
+
+        if (b == 0) {
+            System.out.println("Chose b not equal to 0!");
+        } else if (a == 0) {
+            System.out.println("a / b = 0");
+        } else {
+            while (tempMod >= b) {
+                tempMod -= b;
+            }
+            System.out.println("a % b = " + tempMod);
+        }
     }
 }
