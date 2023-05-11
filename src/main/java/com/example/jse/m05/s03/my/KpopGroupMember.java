@@ -5,13 +5,18 @@ public class KpopGroupMember {
     private String memberName;
     private int memberAge;
     private String placeOfBirth;
-    
-    
+
     public KpopGroupMember(char gender, String memberName, int memberAge, String placeOfBirth) {
         super();
         this.gender = gender;
         this.memberName = memberName;
         this.memberAge = memberAge;
         this.placeOfBirth = placeOfBirth;
+    }
+
+    @Override
+    public String toString() {
+        return "KpopGroupMember [gender=" + gender + ", memberName=" + memberName + ", memberAge=" + memberAge
+                + ", placeOfBirth=" + placeOfBirth + "]";
     }
 }
