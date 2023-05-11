@@ -5,12 +5,17 @@
  */
 package com.example.jse.m05.s08.exercise;
 
+import java.util.logging.Logger;
+
 /**
  * Complete the code
  * 
  * @see Main the user class
  */
 public class Circle {
+    
+//    oggetto standard per il log
+    private static final Logger log = Logger.getGlobal();
     private double radius;
 
     /**
@@ -28,6 +33,7 @@ public class Circle {
      * @return the circle area
      */
     public double area() {
+        log.info("Messaggio di prova");
         return Math.pow(radius, 2) * Math.PI;
     }
 
@@ -37,6 +43,7 @@ public class Circle {
      * @return the circle perimeter
      */
     public double perimeter() {
+        log.info("Secondo messaggio di prova");
         return 2 * Math.PI * radius;
     }
 }
