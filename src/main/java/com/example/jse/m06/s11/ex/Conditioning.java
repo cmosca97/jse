@@ -11,4 +11,7 @@ package com.example.jse.m06.s11.ex;
  * TODO: provide an abstract method to set the temperature to a given value
  */
 public interface Conditioning {
+    int DEFAULT_TEMPERATURE = 20;
+
+    public void setTemperature(int temp);
 }

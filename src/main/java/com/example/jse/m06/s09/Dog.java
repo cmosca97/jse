@@ -41,6 +41,15 @@ public class Dog extends Mammal implements Barking, Drinking {
     }
 
     /**
+     * If I want my dog to repeat the action wag
+     */
+    public void wag(int count) {
+        for (int i = 0; i < count; i++) {
+            wag();
+        }
+    }
+
+    /**
      * Barking objects should know how to bark
      */
     @Override

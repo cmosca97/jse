@@ -21,4 +21,13 @@ public class Vehicle {
     public Vehicle() {
         log.info("Vehicle created");
     }
+
+    public void steer(boolean left) {
+        log.info("Vehicle is steering " + (left ? "left" : "right"));
+    }
+
+    public void brake() {
+        log.info("Vehicle has braked");
+    }
+
 }

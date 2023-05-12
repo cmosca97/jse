@@ -15,13 +15,15 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-        Object[] objects = { new Man("Tom"), new Werewolf("Wally"), new Wolf() };
+        Object[] objects = { new Man("Tom"), //
+                Werewolf.createByHumanAndWolfName("Wally", "Wawaally"), //
+                new Wolf() }; //
 
         for (Object object : objects) {
             System.out.println(object.toString());
         }
 
-        Werewolf ww = new Werewolf("Uli");
+        Werewolf ww = Werewolf.createByHumanAndWolfName("Uli", "Uououoo");
         ww.howl();
         ww.sayHello();
         ww.sayHowllo();

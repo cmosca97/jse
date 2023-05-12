@@ -10,39 +10,44 @@ package com.example.jse.m06.s10;
  * Wolfable
  */
 public class Werewolf extends Man implements Wolfable {
-    // !!! BAD idea, see Man.name !!! TODO: fix the mistake
-    private String name;
+    private String nameAsWolf;
 
     /**
-     * Canonical constructor
      * 
-     * @param name the werewolf name
+     * @param nameAsHuman the human name
+     * @param nameAsWolf  the werewolf name
      */
-    public Werewolf(String name) {
-        // more info on super soon
-        // super(name);
-        this.name = name;
+    private Werewolf(String nameAsHuman, String nameAsWolf) {
+        super(nameAsHuman);
+        this.nameAsWolf = nameAsWolf;
+    }
+
+//    Static factory method
+    public static Werewolf createByHumanAndWolfName(String nameAsHuman, String nameAsWolf) {
+        return new Werewolf(nameAsHuman, nameAsWolf);
     }
 
     /**
      * Specific werewolf method, something in between howl() and Man::sayHello()
      */
+
+    // I use a getter to get the name from the class Man
     public void sayHowllo() {
-        System.out.println("Howllo, I'm " + name);
+        System.out.println("Howllo, I'm " + nameAsWolf);
     }
 
     @Override
     public void howl() {
-        System.out.println("Howhowl, I'm " + name);
+        System.out.println("Howhowl, I'm " + nameAsWolf);
     }
 
     @Override
     public void attack(Man man) {
-        System.out.printf("%s is attacking %s%n", name, man);
+        System.out.printf("%s is attacking %s%n", getName(), man);
     }
 
     @Override
     public String toString() {
-        return "A Werewolf named " + name;
+        return "A Werewolf named " + nameAsWolf;
     }
 }
