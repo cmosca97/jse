@@ -24,6 +24,12 @@ public class Poodle extends Dog {
         this.owner = owner;
     }
 
+//    @Override
+//    public void bark() {
+//        super.bark();
+//        System.out.println("Poodle is barking");
+//    }
+
     @Override
     public String toString() {
         return "Poodle [owner=" + owner + ", " + super.toString() + "]";
