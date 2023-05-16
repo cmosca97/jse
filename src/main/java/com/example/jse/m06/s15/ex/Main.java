@@ -28,16 +28,32 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+        Actor[] actors = { new Warrior("Xena", 200), new Wizard("Harry", 60), new Wizard("Merlin", 150),
+                new Warrior("Lee", 150) };
 
         for (Actor actor : actors) {
             System.out.println(actor);
         }
 
+        boolean winner = false;
         System.out.println("Let's fight ...");
-        for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
+        for (int i = 0; i < actors.length; i++) {
+            for (int j = 0; j < actors.length; j++) {
+                if (actors[i] != actors[j] && actors[i].isAlive() && actors[j].isAlive()) {
+                    winner = actors[i].fight(actors[j]);
+                    if (!winner) {
+                        actors[i].setAlive(false);
+                    } else {
+                        actors[j].setAlive(false);
+                    }
+                }
+            }
+        }
+        System.out.println("Survivors:");
+        for(Actor actor : actors) {
+            if(actor.isAlive()) {
+                System.out.println(actor);
+            }
         }
     }
 }
