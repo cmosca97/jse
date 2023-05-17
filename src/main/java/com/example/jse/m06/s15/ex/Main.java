@@ -27,9 +27,8 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO: create actors, both warriors and wizards
-        Actor[] actors = { new Warrior("Xena", 200), new Wizard("Harry", 60), new Wizard("Merlin", 150),
-                new Warrior("Lee", 150) };
+        Actor[] actors = { new Warrior("Xena", 200), new Warrior("Lee", 150), new Wizard("Harry", 60),
+                new Wizard("Merlin", 150) };
 
         for (Actor actor : actors) {
             System.out.println(actor);
@@ -50,8 +49,8 @@ public class Main {
             }
         }
         System.out.println("Survivors:");
-        for(Actor actor : actors) {
-            if(actor.isAlive()) {
+        for (Actor actor : actors) {
+            if (actor.isAlive()) {
                 System.out.println(actor);
             }
         }
