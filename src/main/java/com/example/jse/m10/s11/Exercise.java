@@ -5,7 +5,10 @@
  */
 package com.example.jse.m10.s11;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * HashMap exercise
@@ -21,8 +24,23 @@ public class Exercise {
      * @return only the non-duplicated values from input
      */
     public Collection<Integer> singles(int[] data) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < data.length; i++) {
+            int cur = data[i];
+            Integer count = map.get(cur);
+            if (count == null) {
+                map.put(cur, 1);
+            } else {
+                map.put(cur, count + 1);
+            }
+        }
+        Collection<Integer> result = new ArrayList<>();
+        for (var entry : map.entrySet()) {
+            if (entry.getValue() == 1) {
+                result.add(entry.getKey());
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
