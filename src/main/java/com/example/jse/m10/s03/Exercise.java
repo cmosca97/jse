@@ -5,12 +5,27 @@
  */
 package com.example.jse.m10.s03;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * Three exercises. Compare int[] and List&lt;Integer&gt; behavior
  */
 public class Exercise {
+    public static void main(String[] args) {
+        Exercise exercise = new Exercise();
+        int[] array = { 2, 5, 8, 2, 3, 5, 7, 4 };
+        int[] result = exercise.evensRaw(array);
+        System.out.println(Arrays.toString(result));
+
+        List<Integer> list = List.of(2, 5, 8, 2, 3, 5, 7, 4);
+        List<Integer> x = exercise.evens(list);
+        System.out.println(x);
+        List<Integer> y = exercise.singles(list);
+        System.out.println(y);
+    }
+
     /**
      * Extract from input the even values and return them in an array
      * <p>
@@ -25,7 +40,20 @@ public class Exercise {
      * @return even values from input
      */
     public int[] evensRaw(int[] data) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        int len = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] % 2 == 0) {
+                len++;
+            }
+        }
+        int[] result = new int[len];
+        for (int i = 0, j = 0; i < data.length; i++) {
+            if (data[i] % 2 == 0) {
+                result[j] = data[i];
+                j++;
+            }
+        }
+        return result;
     }
 
     /**
@@ -38,7 +66,19 @@ public class Exercise {
      * 
      */
     public List<Integer> evens(List<Integer> data) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<Integer> result = new ArrayList<>();
+//        for (int i = 0; i < data.size(); i++) {
+//            Integer cur = data.get(i);
+//            if (cur % 2 == 0) {
+//                result.add(cur);
+//            }
+//        }
+        for (Integer cur : data) {
+            if (cur % 2 == 0) {
+                result.add(cur);
+            }
+        }
+        return result;
     }
 
     /**
@@ -50,6 +90,23 @@ public class Exercise {
      * @return only the non-duplicated values from input
      */
     public List<Integer> singles(List<Integer> data) {
-        throw new UnsupportedOperationException("Not yet implemented");
+//        throw new UnsupportedOperationException("Not yet implemented");
+        List<Integer> result = new ArrayList<>();
+        for (Integer cur : data) {
+            if (count(data, cur) == 1) {
+                result.add(cur);
+            }
+        }
+        return result;
+    }
+
+    private int count(List<Integer> data, Integer target) {
+        int count = 0;
+        for (Integer cur : data) {
+            if (cur.equals(target)) {
+                count++;
+            }
+        }
+        return count;
     }
 }
