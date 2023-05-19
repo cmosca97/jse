@@ -6,6 +6,8 @@
 package com.example.jse.m10.s06;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.TreeSet;
 
 /**
  * HashSet exercise
@@ -24,8 +26,16 @@ public class Exercise {
      * @param data a collection, possibly with duplicates
      * @return the original data stripped of duplicates
      */
+
+    public static void main(String[] args) {
+        List<Integer> list = List.of(45, 3, 7, 3, 7);
+        Exercise exercise = new Exercise();
+        Collection<Integer> collection = exercise.singles(list);
+        System.out.println(collection);
+    }
+
     public Collection<Integer> singles(Collection<Integer> data) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+//        return new HashSet<>(data);
+        return new TreeSet<>(data);
     }
 }
