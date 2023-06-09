@@ -5,6 +5,9 @@
  */
 package com.example.jse.m06.s15.ex;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Exercise: create a hierarchy of classes based on Actor
  * <p>
@@ -27,8 +30,8 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-        Actor[] actors = { new Warrior("Xena", 200), new Warrior("Lee", 150), new Wizard("Harry", 60),
-                new Wizard("Merlin", 150) };
+        List<Actor> actors = new ArrayList<>(List.of(new Warrior("Xena", 200), new Warrior("Lee", 150),
+                new Wizard("Harry", 60), new Wizard("Merlin", 150)));
 
         for (Actor actor : actors) {
             System.out.println(actor);
@@ -36,14 +39,14 @@ public class Main {
 
         boolean winner = false;
         System.out.println("Let's fight ...");
-        for (int i = 0; i < actors.length; i++) {
-            for (int j = 0; j < actors.length; j++) {
-                if (actors[i] != actors[j] && actors[i].isAlive() && actors[j].isAlive()) {
-                    winner = actors[i].fight(actors[j]);
+        for (int i = 0; i < actors.size(); i++) {
+            for (int j = 0; j < actors.size(); j++) {
+                if (actors.get(i) != actors.get(j) && actors.get(i).isAlive() && actors.get(j).isAlive()) {
+                    winner = actors.get(i).fight(actors.get(j));
                     if (!winner) {
-                        actors[i].setAlive(false);
+                        actors.get(i).setAlive(false);
                     } else {
-                        actors[j].setAlive(false);
+                        actors.get(i).setAlive(false);
                     }
                 }
             }
